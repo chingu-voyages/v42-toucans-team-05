@@ -149,7 +149,7 @@ textarea {
   min-width: 90%;
   max-width: 90%;
   font-size: 30px; 
-
+  text-align: center;
 }
 
 /* Scrollbar for textarea */
