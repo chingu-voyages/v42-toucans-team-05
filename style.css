@@ -30,7 +30,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
+  _overflow: hidden;
 
   
   
@@ -66,8 +66,11 @@ section> h1{
   align-items: center;
 }
 
-.categories {  
-  
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
   border: 4px solid var(--primary-color);
   border-radius: 5px;  
 }
@@ -106,7 +109,7 @@ input,
 }
 
 .search> input{
-  width: 100%;
+  width: 90%;
   height: 2.8rem;
   background:  var(--background-color);
   outline: none; /*var(--primary-color)*/
@@ -130,7 +133,6 @@ input,
 }
 /* Section END */
 
-
 /* JokesDisplay */
 .jokeDisplay {  
   display: flex;
@@ -145,7 +147,7 @@ input,
 }
 
 textarea {
-  height: 22rem;
+  min-height: 22rem;
   min-width: 90%;
   max-width: 90%;
   font-size: 30px; 
@@ -187,6 +189,7 @@ textarea {
  color: white;
  font-size: 1.4rem;
  font-style: italic; 
+ text-align: center;
 }
 
 .link {
@@ -252,14 +255,12 @@ textarea {
 
   header {
     padding-top: 90vh;
-    text-align: center;
   } 
 
   textarea {
     margin-bottom: 90px; 
   }
   #myFooter {
-    text-align: center;
     font-size: 16px;
   }
 }
@@ -269,7 +270,6 @@ textarea {
   .jokeDisplay > label, textarea {
     margin-bottom: 20px;
   }
- 
 }
 
 
@@ -281,13 +281,11 @@ textarea {
   }
   header {
     padding-top: 90vh;
-    text-align: center;
   } 
 
   textarea {
     margin-bottom: 90px; 
-  }  
-  
+  }
 }
 
 @media (max-height: 800px) {
