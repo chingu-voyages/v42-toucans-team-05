@@ -1,6 +1,5 @@
 /*   random images:      https://source.unsplash.com/random    */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
 /* font-family: 'Poppins', sans-serif; */
 
 /**********************************************
@@ -12,15 +11,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 :root {
 	--primary-color: #000;
 	--secondary-color: #fff;
 	--background-color: #ddd;
-  --footer-color: #bebee2; /*Chuck noris favorite color*/
-  --gradient-color: #a8a8df; /*For gradient line on footer*/
 }
 
 body {
@@ -30,266 +26,37 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  _overflow: hidden;
-
-  
-  
+  overflow: hidden;
 }
 
 /**********************************************
                     Layout
 **********************************************/
 
-
-/* Main Header */
-header> img{
-   width: 90px;
-   height: 90px;
-}
-
-header {
- display: flex;
- justify-content: center;
- align-items: center;
-}
-/* Main Header END */
-
-
-/* Section */
-main {
-  margin-top: 4rem;
-}
-
-section> h1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-  border: 4px solid var(--primary-color);
-  border-radius: 5px;  
-}
-
-.catBtn {    
-  border: none;
-  padding: 12px 40px;  
-  table-layout: fixed;
-  text-decoration: none;  
-  font-size: 20px;
-  margin: 5px 0px 5px 0px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 4%;  
-  border-collapse: separate;
-
-}
-
-.catBtn:hover
-{    
-   box-shadow: 3px 3px var(--primary-color); 
-}
-
-.search {
- margin-top: 20px;
- display:flex;
- justify-content: center;
- align-items: center;
-}
-
-.search > 
-input,
-.btn {
-  margin-right: 5px;    
-  font-size: 30px;
-}
-
-.search> input{
-  width: 90%;
-  height: 2.8rem;
-  background:  var(--background-color);
-  outline: none; /*var(--primary-color)*/
-  border: none;  /* border-color: var(--primary-color);  */ 
-  border-radius: 1.625rem;
-  padding: 0 3.5rem 0 1.5rem;
-  font-size: 1.5rem;
-}
-
-#searchBtn {
-  width: 3.5rem;
-  height: 2.8rem;
-  margin-left: -3.5rem;
-  background: none;
-  border: none;
-  outline: none;  
-}
-
-#searchBtn:hover {
-  cursor: pointer;
-}
-/* Section END */
-
-/* JokesDisplay */
-.jokeDisplay {  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.jokeDisplay > label {
-  font-size: 30px;  
-}
-
-textarea {
-  min-height: 22rem;
-  min-width: 90%;
-  max-width: 90%;
-  font-size: 30px; 
-  text-align: center;
-}
-
-/* Scrollbar for textarea */
-::-webkit-scrollbar {
-   width: 0.7em;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background-color);
-  
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--footer-color);
-  border-radius: 100vw;
-  
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color);
-}
-/* Scrollbar for textarea END*/
-/* JokesDisplay END*/
-
-
-/* Main Footer */
-#myFooter {
- min-width: 100%;
- margin-top:auto;
- height: 60px; 
- background: var(--primary-color);
- display: flex;
- align-items: center;
- justify-content: center;
- color: white;
- font-size: 1.4rem;
- font-style: italic; 
- text-align: center;
-}
-
-.link {
-  color: var(--footer-color);
-  background-color: transparent;
-  text-decoration: none;
-
-/* Code for linear gradient line */
-  background-image: linear-gradient(90deg, var(--footer-color), var(--gradient-color));
-  background-size: 0% 3px;
-  background-repeat: no-repeat;
-  background-position: left bottom;  
-  transition: 300ms ease;  
-}
-
-.link:hover {
-  background-size: 100% 3px;
-}
-/* Main Footer END*/
-
-
 /**********************************************
                 Specific styles
 **********************************************/
 
-/* HOVER FOR BUTTON */
-/* background-color: var(--primary-color);
-    color: var(	--background-color); */
-
 /**********************************************
                 Helper classes
 **********************************************/
-
 .list-reset {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
-
 .clearfix:after {
   clear: both;
 }
-
 /*********************************************
                @media Queries
 *********************************************/
+/* @media print {} */
 
-
-
-
-
-/* Extra small devices (phones, 600px and down)*/
-@media (max-width: 600px) {
-  body{
-    overflow: scroll;    
-  }
-
-  header {
-    padding-top: 90vh;
-  } 
-
-  textarea {
-    margin-bottom: 90px; 
-  }
-  #myFooter {
-    font-size: 16px;
-  }
-}
-
-/* Small devices (portrait tables and large phones, 600px and up)*/
-@media (min-width: 600px) {  
-  .jokeDisplay > label, textarea {
-    margin-bottom: 20px;
-  }
-}
-
-
-/* Extra Large devices large laptops and desktops, 1024px and up */
-
-@media (min-height: 600px) and (max-height: 800px){
-  body{
-    overflow: scroll;  
-  }
-  header {
-    padding-top: 90vh;
-  } 
-
-  textarea {
-    margin-bottom: 90px; 
-  }
-}
-
-@media (max-height: 800px) {
-  header {
-    padding-top: 90vh;
-  }
-}
+/* @media all and (min-width: 576px) {
+} */
