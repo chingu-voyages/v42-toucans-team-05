@@ -27,3 +27,33 @@ function addEvent() {
   )
 }
 addEvent()
+
+// Free Text Joke
+searchBtn.addEventListener('click', getFreeTextJoke)
+
+function getFreeTextJoke() {
+    let userText = searchText.value
+
+    if (userText !== '') {
+      fetch(`https://api.chucknorris.io/jokes/search?query=${userText}`)
+        .then((prom) => prom.json())
+        .then((res) => {
+          let totalJoke = res.total
+          let randomJoke = Math.floor(Math.random() * totalJoke)
+          let categoryType = res.result[randomJoke].categories[0]
+
+          if (
+            randomJoke >= 0 &&
+            res.result.length !== 0 &&
+            categoryType !== 'explicit' &&
+            categoryType !== 'political' &&
+            categoryType !== 'religion'
+          ) {
+            jokeDisplay.innerHTML = res.result[randomJoke].value
+          } else {
+            jokeDisplay.innerHTML = `There is no joke for the entered word or it belongs to the prohibited category, please try again.`
+          }
+        })
+    }
+    searchText.value = ''
+}
