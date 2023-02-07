@@ -57,3 +57,23 @@ function getFreeTextJoke() {
     }
     searchText.value = ''
 }
+
+// Random Joke
+function getRandomJoke() {
+  fetch('https://api.chucknorris.io/jokes/random')
+    .then((prom) => prom.json())
+    .then((res) => {
+      let categoryType = res.categories[0]
+      if (
+        categoryType !== 'explicit' &&
+        categoryType !== 'political' &&
+        categoryType !== 'religion'
+      ) {
+        jokeDisplay.innerHTML = res.value
+      } else {
+        location.reload()
+      }
+
+    })
+}
+getRandomJoke()
