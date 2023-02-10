@@ -22,10 +22,10 @@ Fonts from [Fonts](https://fonts.googleapis.com/css2?family=Poppins:wght@400;700
 
 ### Team Members
 
-Dr._.Azil - https://github.com/ilija-P : (CSS)
+Dr._.Azil - https://github.com/ilija-P : (HTML & CSS)
 
-Menna-Saad - https://github.com/Menna-Saad : (HTML)
+Menna-Saad - https://github.com/Menna-Saad : (HTML & UI design)
 
-Maxi69K - https://github.com/Maxi69K : (JS)
+Maxi69K - https://github.com/Maxi69K : (JS & Responsive media-query)
 
-Johnny01K - https://github.com/Johnny01K : (JS)
+Johnny01K - https://github.com/Johnny01K : (JS & Readme file)
