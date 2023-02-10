@@ -13,9 +13,9 @@
 }
 
 :root {
-	--primary-color: #000;
-	--secondary-color: #fff;
-	--background-color: #ddd;
+  --primary-color: #000;
+  --secondary-color: #fff;
+  --background-color: #ddd;
   --footer-color: #bebee2; /*Chuck noris favorite color*/
   --gradient-color: #a8a8df; /*For gradient line on footer*/
 }
