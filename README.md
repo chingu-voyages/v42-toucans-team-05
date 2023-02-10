@@ -1,5 +1,7 @@
 # Chuck Norris Jokes App
 
+### [Live Demo](https://chingu-voyages.github.io/v42-toucans-team-05/) :point_left: just do a CTRL+click (to open :link: in a new tab)
+
 ## Overview
 
 This app was made as a team project for Chingu voyage V42
